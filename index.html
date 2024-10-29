@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rich To-Do List with Widgets</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Productivity Dashboard</h1>
+    </header>
+
+    <div class="widget" id="todo-list">
+      <h2>To-Do List <i class="fas fa-tasks"></i></h2>
+      <ul id="todo-items"></ul>
+      <input type="text" id="new-task" placeholder="Add a task..." />
+      <button onclick="addTask()">Add Task</button>
+    </div>
+
+    <div class="widget" id="habit-tracker">
+      <h2>Habit Tracker <i class="fas fa-chart-line"></i></h2>
+      <p>Track your habits daily!</p>
+      <!-- Habit tracker area -->
+    </div>
+
+    <div class="widget" id="pomodoro-timer">
+      <h2>Pomodoro Timer <i class="fas fa-clock"></i></h2>
+      <p id="timer-display">25:00</p>
+      <button onclick="startPomodoro()">Start</button>
+      <button onclick="resetPomodoro()">Reset</button>
+    </div>
+
+    <div class="widget" id="grocery-list">
+      <h2>Grocery List <i class="fas fa-shopping-cart"></i></h2>
+      <ul id="grocery-items"></ul>
+      <input type="text" id="new-item" placeholder="Add a grocery item..." />
+      <button onclick="addGroceryItem()">Add Item</button>
+    </div>
+
+    <div class="widget" id="work-schedule">
+      <h2>Work Schedule <i class="fas fa-calendar-alt"></i></h2>
+      <!-- Work schedule details -->
+    </div>
+
+    <div class="widget" id="priority-matrix">
+      <h2>Priority Matrix <i class="fas fa-exclamation-circle"></i></h2>
+      <div id="priority-grid">
+        <div class="urgent-important">Urgent & Important</div>
+        <div class="urgent-not-important">Urgent & Not Important</div>
+        <div class="not-urgent-important">Not Urgent & Important</div>
+        <div class="not-urgent-not-important">Not Urgent & Not Important</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
